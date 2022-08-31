@@ -1,4 +1,9 @@
-on: [push]
+on:
+  push:
+    branches:
+      - 'main'
+    tags:
+      - 'v*'
 
 jobs:
   container_build_job:
@@ -34,4 +39,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: insobi/devcontainer-cisco-dc:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devcontainer-cisco-dc:latest
