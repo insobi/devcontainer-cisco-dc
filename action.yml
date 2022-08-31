@@ -6,6 +6,10 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  container-build-tag:
+    description: 'build tag'
+    required: true
+    default: 'dev-1'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
