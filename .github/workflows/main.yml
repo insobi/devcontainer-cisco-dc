@@ -32,9 +32,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: 
-          - ${{ secrets.DOCKERHUB_USERNAME }}/devcontainer-cisco-dc:1.0.0
-          - ${{ secrets.DOCKERHUB_USERNAME }}/devcontainer-cisco-dc:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devcontainer-cisco-dc:1.0.0
+          labels: ${{ secrets.DOCKERHUB_USERNAME }}/devcontainer-cisco-dc:latest
 
       # - name: tag and push
       #   uses: docker/build-push-action@v3
