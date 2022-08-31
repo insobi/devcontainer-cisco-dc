@@ -28,3 +28,10 @@ jobs:
           context: .
           push: true
           tags: insobi/devcontainer-cisco-dc:1.0.0
+
+      - name: tag and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: insobi/devcontainer-cisco-dc:latest
