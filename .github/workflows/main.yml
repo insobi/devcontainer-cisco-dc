@@ -32,4 +32,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: insobi/devcontainer-cisco-dc:${{ inputs.container-build-tag }}
+          tags: insobi/devcontainer-cisco-dc:dev-1
