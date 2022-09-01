@@ -1,0 +1,18 @@
+- hosts: apic
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Query ACI Tenant list
+    cisco.aci.aci_rest:
+      host:           "{{ ansible_host }}" 
+      user:           "{{ ansible_user }}" 
+      password:       "{{ ansible_password }}" 
+      validate_certs: "{{ validate_certs }}"
+      use_ssl:        "{{ use_ssl }}"
+      path: /api/class/fvTenant.json
+      method: get
+    register: tenants
+
+  - debug:
+      var: tenants

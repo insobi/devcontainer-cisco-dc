@@ -1,0 +1,8 @@
+[apic]
+apic1.dcloud.cisco.com ansible_host=198.18.133.200
+
+[apic:vars]
+ansible_user=admin
+ansible_password=C1sco12345
+validate_certs=false
+use_ssl=true
