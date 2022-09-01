@@ -3,7 +3,7 @@ on:
     # branches:
     #   - 'main'
     tags:
-      - 'v*'
+      - 'image-v*'
 
 jobs:
   container_build_job:
