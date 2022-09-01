@@ -1,0 +1,10 @@
+[ndfc]
+ndfc.dcloud.cisco.com ansible_host=198.18.134.200
+
+[ndfc:vars]
+ansible_user=admin
+ansible_password=C1sco12345
+ansible_network_os=cisco.dcnm.dcnm
+ansible_httpapi_validate_certs=False
+ansible_httpapi_use_ssl=True
+ansible_connection=ansible.netcommon.httpapi
