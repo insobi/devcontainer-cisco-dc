@@ -31,12 +31,16 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
 
+      - name: Set output
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devcontainer-cisco-dc:${GITHUB_REF#refs/*/}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devcontainer-cisco-dc:${{ steps.vars.outputs.tag }}
 
       - name: tag and push
         uses: docker/build-push-action@v3
